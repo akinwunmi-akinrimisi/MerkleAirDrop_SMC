@@ -4,8 +4,9 @@ const helpers = require("@nomicfoundation/hardhat-network-helpers");
 async function main() {
 
     const BAYC_CONTRACT_ADDRESS = "0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D"; // BAYC contract on Ethereum mainnet
-    const ERC20_TOKEN_ADDRESS = "0xb55d31e46428bEB28234b62D5178DAd5Ec8aD8ca"; //  ERC20 token address
+    const ERC20_TOKEN_ADDRESS = "0x58730ae0FAA10d73b0cDdb5e7b87C3594f7a20CB"; //  ERC20 token address
     const BAYC_HOLDER = "0x76C1cFe708ED1d2FF2073490727f3301117767e9"; // address of a BAYC holder
+    const AirdropContractAddress = "0xYourAirdropContractAddress"; 
 
     await helpers.impersonateAccount(BAYC_HOLDER);
     const impersonatedSigner = await ethers.getSigner(BAYC_HOLDER);
