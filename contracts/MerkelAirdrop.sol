@@ -5,18 +5,18 @@ import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
 import "@openzeppelin/contracts/utils/cryptography/MerkleProof.sol";
 
-contract MerkelAirdrop {
+contract MerkleAirdrop {
     IERC20 public token;
+    IERC721 public BAYC;
     bytes32 public merkleRoot;
-    mapping(address=>bool) public hasClaimed;
 
+    mapping(address => bool) public hasClaimed;
     address public BAYC_CONTRACT = 0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D;
 
-    IERC721 BAYC = IERC721(BAYC_CONTRACT);
-
-    constructor(address _token, bytes32 _merkleRoot){
+    constructor(address _token, bytes32 _merkleRoot, address _baycContract) {
         token = IERC20(_token);
         merkleRoot = _merkleRoot;
+        BAYC = IERC721(_baycContract); // 
     }
 
     function ownsBAYC(address user) public view returns(bool){
@@ -35,3 +35,9 @@ contract MerkelAirdrop {
         require(token.transfer(msg.sender, amount), "Token transfer failed");
     }
 }
+
+
+
+
+
+
