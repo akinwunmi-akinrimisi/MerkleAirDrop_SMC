@@ -1,0 +1,32 @@
+{
+  "name": "merkleairdrop_smc",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.7",
+    "@nomicfoundation/hardhat-ethers": "^3.0.8",
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@types/node": "^22.5.5",
+    "chai": "^4.2.0",
+    "hardhat": "^2.22.10",
+    "mocha": "^10.7.3"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.2",
+    "@openzeppelin/test-helpers": "^0.5.16",
+    "csv-parser": "^3.0.0",
+    "dotenv": "^16.4.5",
+    "ethers": "^6.13.2",
+    "import": "^0.0.6",
+    "keccak256": "^1.0.6",
+    "merkle-tools": "^1.4.1",
+    "merkletreejs": "^0.4.0"
+  }
+}
